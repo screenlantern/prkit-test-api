@@ -2,27 +2,51 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="vue.min.js"></script>
-        <style>
-            #app{
-                color: #000;
-            }
-        </style>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./milligram.min.css"/>
+    <style>
+        a {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div id="app">
-            <user-list></user-list>
-        </div>
-    </body>
-     <script src="ui.js"></script>
+    <div id="app">
+        <section class="container">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>First name</th>
+                    <th>Last  name</th>
+                    <th>Email Address</th>
+                    <th></th>
+                </tr>
+                <tr v-for="(user, index) in users">
+                    <td>{{ index + 1 }}</td>
+                    <td>{{ user.firstname }}</td>
+                    <td>{{ user.lastname }}</td>
+                    <td>{{ user.email }}</td>
+                    <td><button v-on:click="deleteUser(user._id)" >x</button></td>
+                </tr>
+            </table>
+        </section>
+    </div>
+</body>
+<script src="vue.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="ui.js"></script>
+
 </html>

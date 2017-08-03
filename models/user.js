@@ -17,15 +17,6 @@ User.prototype.findAll = function () {
     });
 }
 
-User.prototype.findOne = function (query) {
-    return new Promise(function (res, rej) {
-       let rec =  db.get('users').find(query).value();
-        if(rec){
-            res(rec);
-        }
-    });
-}
-
 User.prototype.create = function (obj) {
     return new Promise(function (res, rej) {
         db.get('users').push(obj).last().write().then((rec) => {
@@ -36,7 +27,7 @@ User.prototype.create = function (obj) {
 
 User.prototype.update = function (id, obj) {
     return new Promise(function (res, rej) {
-        db.get('users').find(id).assign(obj).write().then((rec) => {
+        db.get('users').find({_id: id}).assign(obj).write().then((rec) => {
             res(rec);
         }); 
     });
@@ -44,7 +35,7 @@ User.prototype.update = function (id, obj) {
 
 User.prototype.delete = function (id) {
     return new Promise(function (res, rej) {
-        db.get('users').remove(id).write().then((rec) => {
+        db.get('users').remove({_id: id}).write().then((rec) => {
             res(rec);
         });
     });
