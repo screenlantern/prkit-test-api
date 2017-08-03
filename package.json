@@ -1,0 +1,33 @@
+{
+  "name": "api-prkit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server",
+    "watch": "nodemon app.js",
+    "test": "ava"
+  },
+  "author": "warren baugh",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "kcors": "^2.2.1",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-compose": "^4.0.0",
+    "koa-logger": "^3.0.1",
+    "koa-router": "^7.2.1",
+    "koa-validate": "^1.0.7",
+    "lowdb": "^0.16.2",
+    "shortid": "^2.2.8",
+    "supertest-koa-agent": "^0.3.0"
+  },
+  "devDependencies": {
+    "ava": "^0.21.0",
+    "koa-static": "^4.0.1",
+    "nodemon": "^1.11.0",
+    "supertest": "^3.0.0",
+    "supertest-as-promised": "^4.0.2"
+  }
+}

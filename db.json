@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "email": "screenlantern@gmail.com",
+      "firstname": "warren",
+      "lastname": "baugh",
+      "_id": "SyLBFYewb",
+      "dateCreated": 1501759806505
+    },
+    {
+      "email": "test@gmail.com",
+      "firstname": "test",
+      "lastname": "case",
+      "_id": "H1eT02xvZ",
+      "dateCreated": 1501773495809
+    },
+    {
+      "email": "cory@gmail.com",
+      "firstname": "cory",
+      "lastname": "baugh",
+      "_id": "r1271pgv-",
+      "dateCreated": 1501773604054
+    }
+  ]
+}
