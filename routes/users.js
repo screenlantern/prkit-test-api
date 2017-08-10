@@ -8,7 +8,6 @@ router
         ctx.body = await User.findAll();
     })
     .post('/', async (ctx, next) => {
-        console.log(ctx.request.body);
         let rec = Object.assign({}, ctx.request.body, {_id: shortid.generate(), dateCreated: Date.now()})
         ctx.body = await User.create(rec);
     })
